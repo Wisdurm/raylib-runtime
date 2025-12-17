@@ -1,0 +1,8 @@
+# LOAD LIBRARY
+Include("libraylib.so")
+# FUNCTIONS
+Bind("InitWindow", "void", "int", "int", "cstring")
+Bind("WindowShouldClose", "int")
+Bind("BeginDrawing", "void")
+Bind("EndDrawing", "void")
+Bind("CloseWindow", "void")
