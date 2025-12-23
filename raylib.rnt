@@ -3,15 +3,38 @@ Include("libraylib.so")
 # STRUCTS
 Object(Color, "uchar", "uchar", "uchar", "uchar")
 # CONSTANTS
-Object(RAYWHITE, 245, 245, 245, 255)
-Object(WHITE, 255, 255, 255, 255)
-Object(BLACK, 0, 0, 0, 255)
-Object(BLANK, 0, 0, 0, 0) # Transparent
+Object(LIGHTGRAY  200, 200, 200, 255)   # Light Gray
+Object(GRAY       130, 130, 130, 255)   # Gray
+Object(DARKGRAY   80, 80, 80, 255   )   # Dark Gray
+Object(YELLOW     253, 249, 0, 255  )   # Yellow
+Object(GOLD       255, 203, 0, 255  )   # Gold
+Object(ORANGE     255, 161, 0, 255  )   # Orange
+Object(PINK       255, 109, 194, 255)   # Pink
+Object(RED        230, 41, 55, 255  )   # Red
+Object(MAROON     190, 33, 55, 255  )   # Maroon
+Object(GREEN      0, 228, 48, 255   )   # Green
+Object(LIME       0, 158, 47, 255   )   # Lime
+Object(DARKGREEN  0, 117, 44, 255   )   # Dark Green
+Object(SKYBLUE    102, 191, 255, 255)   # Sky Blue
+Object(BLUE       0, 121, 241, 255  )   # Blue
+Object(DARKBLUE   0, 82, 172, 255   )   # Dark Blue
+Object(PURPLE     200, 122, 255, 255)   # Purple
+Object(VIOLET     135, 60, 190, 255 )   # Violet
+Object(DARKPURPLE 112, 31, 126, 255 )   # Dark Purple
+Object(BEIGE      211, 176, 131, 255)   # Beige
+Object(BROWN      127, 106, 79, 255 )   # Brown
+Object(DARKBROWN  76, 63, 47, 255   )   # Dark Brown
+
+Object(WHITE      255, 255, 255, 255)   # White
+Object(BLACK      0, 0, 0, 255      )   # Black
+Object(BLANK      0, 0, 0, 0        )   # Blank (Transparent)
+Object(MAGENTA    255, 0, 255, 255  )   # Magenta
+Object(RAYWHITE   245, 245, 245, 255)   # My own White (raylib logo)
 # FUNCTIONS
 Bind("InitWindow", "void", "int", "int", "cstring")
 Bind("WindowShouldClose", "int")
-Bind("ClearBackground", Color)
-Bind("DrawText", "cstring", "int", "int", "int", Color)
+Bind("ClearBackground", "void", Color)
+Bind("DrawText", "void", "cstring", "int", "int", "int", Color)
 Bind("BeginDrawing", "void")
 Bind("EndDrawing", "void")
 Bind("CloseWindow", "void")
